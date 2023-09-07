@@ -9,7 +9,7 @@ const storage = multer.diskStorage({
     cb(null, `${__basedir}/uploads/`);
   },
   filename: (req, file, cb) => {
-    console.log(file.originalname);
+    console.log(">>> file.originalname: ", file);
     cb(null, file.originalname);
   },
 });
